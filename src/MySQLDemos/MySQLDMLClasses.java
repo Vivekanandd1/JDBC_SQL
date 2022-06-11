@@ -14,9 +14,19 @@ public class MySQLDMLClasses {
 		Statement stmt = con.createStatement();
 		
 		//String s = "INSERT INTO imgCnt VALUES('COLLEGE',1001)";
-		 String s ="UPDATE imgCnt SET department='amblance' where em_no=100";
+//		 String s ="UPDATE imgCnt SET department='corporate' where em_no=100";
+//		String s ="DELETE FROM imgCnt where department='COLLEGE'";
+//		String s = "alter table imgCnt add Governance varchar(30)";
+		
+		String s = "update imgCnt set Governance='private sector'where em_no=100";
+		String t = "update imgCnt set Governance='public sector'where em_no=101";
+		String u = "update imgCnt set Governance='public sector'where em_no=1908";
+		
+		
 		//3. excute query
 		stmt.execute(s);
+		stmt.execute(t);
+		stmt.execute(u);
 		
 		//4.close connection
 		con.close();
